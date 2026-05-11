@@ -40,30 +40,7 @@
       "name": "Сергей Петров",
       "gender": "male",
       "birthDate": "1951-02-14",
-      "children": [
-        {
-          "id": "7",
-          "name": "Дмитрий Петров",
-          "gender": "male",
-          "birthDate": "1978-12-03",
-          "children": [
-            {
-              "id": "9",
-              "name": "Кирилл Петров",
-              "gender": "male",
-              "birthDate": "2005-08-15",
-              "children": []
-            },
-            {
-              "id": "10",
-              "name": "Анна Петрова",
-              "gender": "female",
-              "birthDate": "2008-04-22",
-              "children": []
-            }
-          ]
-        }
-      ]
+      "children": []
     },
     {
       "id": "4",
