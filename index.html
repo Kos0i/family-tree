@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генеалогическое дерево</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <!-- ===== Шапка ===== -->
+    <header class="header">
+      <div class="header__logo">
+        <span class="header__logo-text">Древо</span>
+      </div>
+      <nav class="header__nav">
+        <button class="btn btn--ghost" id="btn-load-sample">
+          Загрузить пример
+        </button>
+      </nav>
+    </header>
+
+    <!-- ===== Основной контент ===== -->
+    <main class="layout">
+
+      <!-- Боковая панель: управление и инфо о выбранном узле -->
+      <aside class="sidebar">
+        <section class="sidebar__section">
+          <h2 class="sidebar__title">Загрузка данных</h2>
+
+          <!-- Загрузка через URL (fetch) -->
+          <div class="form-group">
+            <label class="form-label" for="api-url">URL источника</label>
+            <input
+              class="form-input"
+              id="api-url"
+              type="url"
+              placeholder="https://api.example.com/tree"
+            />
+            <button class="btn btn--primary btn--full" id="btn-fetch">
+              Получить данные
+            </button>
+          </div>
+
+          <div class="divider">или</div>
+
+          <!-- Загрузка локального JSON-файла -->
+          <div class="form-group">
+            <label class="form-label" for="file-input">Локальный JSON</label>
+            <label class="file-drop" id="file-drop-zone" for="file-input">
+              <span class="file-drop__icon">↑</span>
+              <span class="file-drop__text">Нажмите и выберете файл</span>
+            </label>
+            <input class="visually-hidden" id="file-input" type="file" accept=".json" />
+          </div>
+        </section>
+
+        <!-- Статус запроса -->
+        <div class="status-bar" id="status-bar" aria-live="polite">
+          Данные не загружены
+        </div>
+
+        <!-- Информация о выбранном человеке -->
+        <section class="sidebar__section" id="person-panel" hidden>
+          <h2 class="sidebar__title">Персона</h2>
+          <dl class="person-card" id="person-card">
+            <!-- Заполняется динамически через JS -->
+          </dl>
+        </section>
+      </aside>
+
+      <!-- Область визуализации D3 -->
+      <section class="canvas-area">
+        <!-- Toolbar управления деревом -->
+        <div class="canvas-toolbar">
+          <button class="icon-btn" id="btn-zoom-in"  title="Увеличить">+</button>
+          <button class="icon-btn" id="btn-zoom-out" title="Уменьшить">−</button>
+          <button class="icon-btn" id="btn-zoom-fit" title="По размеру">⊡</button>
+        </div>
+
+        <!-- Пустое состояние -->
+        <div class="empty-state" id="empty-state">
+          <p class="empty-state__text">Загрузите данные,<br>чтобы отобразить дерево</p>
+        </div>
+
+        <!-- SVG-холст D3 -->
+        <svg id="tree-svg" aria-label="Генеалогическое дерево"></svg>
+      </section>
+
+    </main>
+
+    <!-- Загрузчик (показывается во время fetch) -->
+    <div class="loader" id="loader" hidden aria-hidden="true">
+      <div class="loader__spinner"></div>
+    </div>
+
+    <!-- Скрипт приложения -->
+    <script type="module" src="/src/main.js"></script>
+    
+  </body>
+</html>

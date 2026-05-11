@@ -1,0 +1,76 @@
+
+{"id": "1",
+"name": "Иван Петров",
+"gender": "male",
+"birthDate": "1920-03-15",
+"deathDate": "1995-11-02",
+"children": [
+    {
+      "id": "2",
+      "name": "Мария Петрова",
+      "gender": "female",
+      "birthDate": "1948-07-22",
+      "children": [
+        {
+          "id": "5",
+          "name": "Алексей Смирнов",
+          "gender": "male",
+          "birthDate": "1972-01-10",
+          "children": [
+            {
+              "id": "8",
+              "name": "Дарья Смирнова",
+              "gender": "female",
+              "birthDate": "2001-05-30",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "name": "Наталья Смирнова",
+          "gender": "female",
+          "birthDate": "1975-09-18",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Сергей Петров",
+      "gender": "male",
+      "birthDate": "1951-02-14",
+      "children": [
+        {
+          "id": "7",
+          "name": "Дмитрий Петров",
+          "gender": "male",
+          "birthDate": "1978-12-03",
+          "children": [
+            {
+              "id": "9",
+              "name": "Кирилл Петров",
+              "gender": "male",
+              "birthDate": "2005-08-15",
+              "children": []
+            },
+            {
+              "id": "10",
+              "name": "Анна Петрова",
+              "gender": "female",
+              "birthDate": "2008-04-22",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Ольга Козлова",
+      "gender": "female",
+      "birthDate": "1955-06-30",
+      "children": []
+    }
+  ]
+}
