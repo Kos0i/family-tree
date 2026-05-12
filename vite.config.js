@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 
-  base: process.env.VITE_BASE_URL ?? '/family-tree/',
+  base: process.env.VITE_BASE_URL ?? '/family-tree-prod/',
 
   server: {
     port: 5173,
