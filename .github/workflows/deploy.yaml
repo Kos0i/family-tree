@@ -31,7 +31,6 @@ jobs:
         env:
           # Передаём базовый путь для Vite, чтобы ассеты корректно
           # разрешались на GitHub Pages (/<repo-name>/)
-          VITE_BASE_URL: ${{ secrets.PUBLIC_PAGES_BASE_URL || '/' }}
           # Если бэкенд-API задан — пробрасываем его в сборку
           VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL || '' }}
 
