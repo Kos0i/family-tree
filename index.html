@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <!-- ===== Шапка ===== -->
+    <!--Шапка -->
     <header class="header">
       <div class="header__logo">
         <span class="header__logo-text">Древо</span>
@@ -19,15 +19,15 @@
       </nav>
     </header>
 
-    <!-- ===== Основной контент ===== -->
+    <!--Контент-->
     <main class="layout">
 
-      <!-- Боковая панель: управление и инфо о выбранном узле -->
+      <!--Боковая панель: управление и инфо о выбранном узле-->
       <aside class="sidebar">
         <section class="sidebar__section">
           <h2 class="sidebar__title">Загрузка данных</h2>
 
-          <!-- Загрузка через URL (fetch) -->
+          <!--Загрузка через URL (fetch)-->
           <div class="form-group">
             <label class="form-label" for="api-url">URL источника</label>
             <input
@@ -43,7 +43,7 @@
 
           <div class="divider">или</div>
 
-          <!-- Загрузка локального JSON-файла -->
+          <!--Загрузка локального JSON-файла-->
           <div class="form-group">
             <label class="form-label" for="file-input">Локальный JSON</label>
             <label class="file-drop" id="file-drop-zone" for="file-input">
@@ -54,46 +54,44 @@
           </div>
         </section>
 
-        <!-- Статус запроса -->
+        <!--Статус запроса-->
         <div class="status-bar" id="status-bar" aria-live="polite">
           Данные не загружены
         </div>
 
-        <!-- Информация о выбранном человеке -->
+        <!--Информация о выбранном человеке-->
         <section class="sidebar__section" id="person-panel" hidden>
           <h2 class="sidebar__title">Персона</h2>
           <dl class="person-card" id="person-card">
-            <!-- Заполняется динамически через JS -->
+            <!--Заполняется динамически через JS-->
           </dl>
         </section>
       </aside>
 
-      <!-- Область визуализации D3 -->
+      <!--Область визуализации D3-->
       <section class="canvas-area">
-        <!-- Toolbar управления деревом -->
+        <!--Зумы-->
         <div class="canvas-toolbar">
           <button class="icon-btn" id="btn-zoom-in"  title="Увеличить">+</button>
           <button class="icon-btn" id="btn-zoom-out" title="Уменьшить">−</button>
           <button class="icon-btn" id="btn-zoom-fit" title="По размеру">⊡</button>
         </div>
 
-        <!-- Пустое состояние -->
+        <!--Пустое состояние-->
         <div class="empty-state" id="empty-state">
           <p class="empty-state__text">Загрузите данные,<br>чтобы отобразить дерево</p>
         </div>
 
-        <!-- SVG-холст D3 -->
+        <!--SVG-холст D3-->
         <svg id="tree-svg" aria-label="Генеалогическое дерево"></svg>
       </section>
 
     </main>
 
-    <!-- Загрузчик (показывается во время fetch) -->
     <div class="loader" id="loader" hidden aria-hidden="true">
       <div class="loader__spinner"></div>
     </div>
 
-    <!-- Скрипт приложения -->
     <script type="module" src="/src/main.js"></script>
     
   </body>
